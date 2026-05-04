@@ -48,6 +48,31 @@ main {
     margin: 0;
 }
 
+.hero-images {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.hero-image {
+    max-width: 260px;
+    text-align: center;
+}
+
+.hero-image img {
+    width: 100%;
+    height: auto;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.hero-image p {
+    margin-top: 0.75rem;
+    color: #555;
+}
+
 #products {
     display: flex;
     justify-content: space-around;
