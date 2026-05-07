@@ -59,9 +59,8 @@ function toggleCartDropdown() {
 }
 
 function goToCheckout() {
-    // For now, just alert. You can replace this with actual checkout logic
-    alert('Redirecting to checkout...');
-    // You could redirect to a checkout page like: window.location.href = 'checkout.html';
+    // Redirect to checkout page
+    window.location.href = 'checkout.html';
 }
 
 function addToCart(productName, productPrice) {
