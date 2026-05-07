@@ -18,6 +18,20 @@ header {
     max-width: 1200px;
     margin: 0 auto;
     gap: 1rem;
+    position: relative;
+}
+
+.logo-center {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+}
+
+.header-logo {
+    height: 50px;
+    width: auto;
 }
 
 nav ul {
