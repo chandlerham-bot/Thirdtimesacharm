@@ -123,6 +123,28 @@ nav ul {
 .item-price {
     font-weight: bold;
     color: #333;
+    margin-right: 0.5rem;
+}
+
+.remove-item {
+    background: none;
+    border: none;
+    color: #999;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.remove-item:hover {
+    background-color: #f0f0f0;
+    color: #666;
 }
 
 .checkout-button {

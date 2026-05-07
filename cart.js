@@ -36,13 +36,14 @@ function updateCartDropdown(cart) {
         cartItemsElement.innerHTML = '<p>Your cart is empty</p>';
         if (checkoutButton) checkoutButton.style.display = 'none';
     } else {
-        cart.forEach(item => {
+        cart.forEach((item, index) => {
             const itemElement = document.createElement('div');
             itemElement.className = 'cart-item';
             itemElement.innerHTML = `
                 <span class="item-name">${item.name}</span>
                 <span class="item-quantity">Qty: ${item.quantity}</span>
                 <span class="item-price">${item.price}</span>
+                <button class="remove-item" onclick="removeFromCart(${index})" aria-label="Remove ${item.name} from cart">×</button>
             `;
             cartItemsElement.appendChild(itemElement);
         });
@@ -80,6 +81,17 @@ function addToCart(productName, productPrice) {
     saveCart(cart);
     updateCartDisplay();
     alert(productName + ' added to cart!');
+}
+
+function removeFromCart(index) {
+    const cart = getCart();
+    if (index >= 0 && index < cart.length) {
+        const removedItem = cart[index];
+        cart.splice(index, 1);
+        saveCart(cart);
+        updateCartDisplay();
+        alert(removedItem.name + ' removed from cart!');
+    }
 }
 
 // Close dropdown when clicking outside
