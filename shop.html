@@ -5,36 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shop - Performance Office Chairs</title>
     <link rel="stylesheet" href="styles.css">
-    <script>
-        function addToCart(productName, productPrice) {
-            let cart = JSON.parse(localStorage.getItem('cart')) || [];
-            const item = {
-                name: productName,
-                price: productPrice,
-                quantity: 1
-            };
-            
-            const existingItem = cart.find(p => p.name === productName);
-            if (existingItem) {
-                existingItem.quantity += 1;
-            } else {
-                cart.push(item);
-            }
-            
-            localStorage.setItem('cart', JSON.stringify(cart));
-            alert(productName + ' added to cart!');
-        }
-    </script>
+    <script src="cart.js" defer></script>
 </head>
 <body>
     <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="shop.html">Shop</a></li>
-                <li><a href="about.html">About</a></li>
-            </ul>
-        </nav>
+        <div class="nav-wrap">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </nav>
+            <div class="cart-widget">
+                <a href="shop.html" class="cart-button" aria-label="View cart">
+                    <span class="cart-icon">🛒</span>
+                    <span id="cart-count">0</span>
+                </a>
+                <div id="cart-status" class="cart-status" aria-live="polite">Cart is empty</div>
+            </div>
+        </div>
     </header>
     <main>
         <section id="products">

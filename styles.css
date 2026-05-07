@@ -11,12 +11,61 @@ header {
     padding: 1rem;
 }
 
+.nav-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 1rem;
+}
+
 nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
+}
+
+.cart-widget {
+    text-align: right;
+    color: #fff;
+}
+
+.cart-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    border: 1px solid #fff;
+    padding: 0.5rem 0.75rem;
+    border-radius: 999px;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.cart-button:hover,
+.cart-button:focus {
+    background-color: rgba(255, 255, 255, 0.15);
+    transform: translateY(-1px);
+}
+
+.cart-icon {
+    font-size: 1.1rem;
+}
+
+#cart-count {
+    min-width: 1.5rem;
+    display: inline-block;
+    text-align: center;
+}
+
+.cart-status {
+    font-size: 0.9rem;
+    color: #ddd;
+    margin-top: 0.25rem;
 }
 
 nav ul li {
