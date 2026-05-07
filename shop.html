@@ -18,11 +18,17 @@
                 </ul>
             </nav>
             <div class="cart-widget">
-                <a href="shop.html" class="cart-button" aria-label="View cart">
+                <button class="cart-button" aria-label="View cart" onclick="toggleCartDropdown()">
                     <span class="cart-icon">🛒</span>
                     <span id="cart-count">0</span>
-                </a>
+                </button>
                 <div id="cart-status" class="cart-status" aria-live="polite">Cart is empty</div>
+                <div id="cart-dropdown" class="cart-dropdown">
+                    <div id="cart-items" class="cart-items">
+                        <!-- Cart items will be populated here -->
+                    </div>
+                    <button id="checkout-button" class="checkout-button" onclick="goToCheckout()">Go to Checkout</button>
+                </div>
             </div>
         </div>
     </header>

@@ -31,6 +31,7 @@ nav ul {
 .cart-widget {
     text-align: right;
     color: #fff;
+    position: relative;
 }
 
 .cart-button {
@@ -44,6 +45,8 @@ nav ul {
     padding: 0.5rem 0.75rem;
     border-radius: 999px;
     transition: background-color 0.2s ease, transform 0.2s ease;
+    background: none;
+    cursor: pointer;
 }
 
 .cart-button:hover,
@@ -66,6 +69,77 @@ nav ul {
     font-size: 0.9rem;
     color: #ddd;
     margin-top: 0.25rem;
+}
+
+.cart-dropdown {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    min-width: 300px;
+    max-height: 400px;
+    overflow-y: auto;
+    display: none;
+    z-index: 1000;
+    margin-top: 0.5rem;
+}
+
+.cart-dropdown.show {
+    display: block;
+}
+
+.cart-items {
+    padding: 1rem;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #eee;
+}
+
+.cart-item:last-child {
+    border-bottom: none;
+}
+
+.item-name {
+    flex: 1;
+    font-weight: bold;
+    color: #333;
+}
+
+.item-quantity {
+    margin: 0 1rem;
+    color: #666;
+}
+
+.item-price {
+    font-weight: bold;
+    color: #333;
+}
+
+.checkout-button {
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 0.75rem;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 0 0 8px 8px;
+    transition: background-color 0.3s ease;
+}
+
+.checkout-button:hover {
+    background-color: #555;
 }
 
 nav ul li {
